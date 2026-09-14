@@ -1,0 +1,351 @@
+/* =========================
+   CART PAGE
+========================= */
+
+.cart-page {
+  min-height: 100vh;
+  padding: 40px 20px;
+  background: linear-gradient(
+    135deg,
+    #fff5f8,
+    #f5fff9
+  );
+}
+
+
+/* =========================
+   PAGE TITLE
+========================= */
+
+.cart-page > h1 {
+  text-align: center;
+  color: #243b5a;
+  margin-bottom: 35px;
+  font-size: 36px;
+}
+
+
+/* =========================
+   CART CONTAINER
+========================= */
+
+.cart-container {
+  max-width: 900px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+
+/* =========================
+   CART ITEMS
+========================= */
+
+.cart-items {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.cart-items h2 {
+  text-align: center;
+  color: #ff3366;
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   CART PRODUCT
+========================= */
+
+.cart-product {
+  display: flex;
+  align-items: center;
+
+  gap: 20px;
+
+  padding: 15px 0;
+
+  border-bottom: 1px solid #eeeeee;
+}
+
+
+.cart-product img {
+  width: 80px;
+  height: 80px;
+
+  object-fit: cover;
+
+  border-radius: 10px;
+}
+
+
+.product-info h3 {
+  margin: 0 0 8px;
+
+  color: #243b5a;
+}
+
+
+.product-info p {
+  margin: 0;
+
+  color: #ff3366;
+
+  font-weight: bold;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.cart-total {
+  text-align: center;
+
+  margin: 25px 0;
+
+  color: #243b5a;
+}
+
+
+/* =========================
+   CONTINUE SHOPPING
+========================= */
+
+.continue-shopping {
+  width: 100%;
+
+  padding: 12px;
+
+  margin-bottom: 10px;
+
+  border: 2px solid #ff3366;
+
+  background: white;
+
+  color: #ff3366;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.continue-shopping:hover {
+  background: #ff3366;
+
+  color: white;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+========================= */
+
+.profile-button {
+  width: 100%;
+
+  padding: 12px;
+
+  border: none;
+
+  background: #243b5a;
+
+  color: white;
+
+  border-radius: 7px;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.profile-button:hover {
+  background: palevioletred;
+}
+
+
+/* =========================
+   CHECKOUT FORM
+========================= */
+
+.checkout-form {
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 15px;
+
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+
+.checkout-form h2 {
+  text-align: center;
+
+  color: #20a65a;
+
+  margin-bottom: 25px;
+}
+
+
+/* =========================
+   FORM
+========================= */
+
+.checkout-form form {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+
+/* =========================
+   INPUTS
+========================= */
+
+.checkout-form input,
+.checkout-form textarea {
+  width: 100%;
+
+  box-sizing: border-box;
+
+  padding: 12px;
+
+  border: 1px solid #d9e1df;
+
+  border-radius: 7px;
+
+  font-size: 14px;
+
+  outline: none;
+
+  transition: 0.3s;
+}
+
+
+.checkout-form input:focus,
+.checkout-form textarea:focus {
+  border-color: #20a65a;
+
+  box-shadow: 0 0 5px rgba(32, 166, 90, 0.2);
+}
+
+
+/* =========================
+   TEXTAREA
+========================= */
+
+.checkout-form textarea {
+  min-height: 80px;
+
+  resize: vertical;
+}
+
+
+/* =========================
+   PLACE ORDER
+========================= */
+
+.place-order {
+  padding: 13px;
+
+  margin-top: 5px;
+
+  border: none;
+
+  border-radius: 7px;
+
+  background: #20a65a;
+
+  color: white;
+
+  font-size: 15px;
+
+  font-weight: bold;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+}
+
+
+.place-order:hover {
+  background: #168447;
+}
+
+
+/* =========================
+   SUCCESS MESSAGE
+========================= */
+
+.success-message {
+  max-width: 600px;
+
+  margin: 0 auto 25px;
+
+  padding: 20px;
+
+  text-align: center;
+
+  background: #e8f8ee;
+
+  border: 2px solid #20a65a;
+
+  border-radius: 12px;
+
+  box-shadow: 0 5px 15px rgba(32, 166, 90, 0.15);
+}
+
+
+.success-message h2 {
+  margin: 0 0 8px;
+
+  color: #20a65a;
+}
+
+
+.success-message p {
+  margin: 0;
+
+  color: #555;
+}
+
+
+/* =========================
+   RESPONSIVE DESIGN
+========================= */
+
+@media (max-width: 768px) {
+
+  .cart-container {
+    grid-template-columns: 1fr;
+  }
+
+  .cart-page {
+    padding: 25px 15px;
+  }
+
+  .cart-page > h1 {
+    font-size: 30px;
+  }
+
+}
