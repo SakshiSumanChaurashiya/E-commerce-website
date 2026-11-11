@@ -1,33 +1,17 @@
+
 import { initializeApp } from "firebase/app";
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
 
 const firebaseConfig = {
-    apiKey: "YOUR_API_KEY",
-    authDomain: "YOUR_AUTH_DOMAIN",
-    projectID: "YOUR_PROJECT_ID",
-    StorageBucket: "YOUR_STORAGE_BUCKET",
-    messsagingSenderID: "YOUR_MESSAGING_SENDER_ID",
-    appID: "YOUR_API_ID",
-
+  apiKey: "AIzaSyB9U7Mp2wRkG_NGWiaR3TbhtISTivCc8jU",
+  authDomain: "my-portfolio-1af09.firebaseapp.com",
+  projectId: "my-portfolio-1af09",
+  storageBucket: "my-portfolio-1af09.firebasestorage.app",
+  messagingSenderId: "464180830565",
+  appId: "1:464180830565:web:2aa8fe0f99778d2a79818c"
 };
+
 const app = initializeApp(firebaseConfig);
+
 export const auth = getAuth(app);
 export const googleProvider = new GoogleAuthProvider();
-
-
-// import { initializeApp } from "firebase/app";
-// import { getAuth, GoogleAuthProvider } from "firebase/auth";
-
-// const firebaseConfig = {
-//   apiKey: "YOUR_API_KEY",
-//   authDomain: "YOUR_AUTH_DOMAIN",
-//   projectId: "YOUR_PROJECT_ID",
-//   storageBucket: "YOUR_STORAGE_BUCKET",
-//   messagingSenderId: "YOUR_MESSAGING_SENDER_ID",
-//   appId: "YOUR_APP_ID",
-// };
-
-// const app = initializeApp(firebaseConfig);
-
-// export const auth = getAuth(app);
-// export const googleProvider = new GoogleAuthProvider();

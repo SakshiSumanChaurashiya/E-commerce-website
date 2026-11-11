@@ -1,4 +1,4 @@
-.profile-counter {
+/* .profile-counter {
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -55,4 +55,189 @@
 .profile-option:hover {
   background: rgb(46, 46, 81);
   color: #4f46e5;
+} */
+
+
+
+
+
+
+.profile-page {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 20px 50px;
+}
+
+/* Profile Header */
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding: 35px;
+  border-radius: 18px;
+  background: #ffffff;
+  box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.profile-avatar {
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: #e8f5e9;
+  color: #2e7d32;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+}
+
+.profile-info h1 {
+  margin: 0 0 7px;
+  font-size: 28px;
+  color: #222;
+}
+
+.profile-info p {
+  margin: 0 0 8px;
+  color: #666;
+  font-size: 15px;
+}
+
+.profile-info span {
+  font-size: 13px;
+  color: #2e7d32;
+  font-weight: 600;
+}
+
+/* Account Section */
+
+.account-section {
+  margin-top: 35px;
+}
+
+.account-section h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: #222;
+}
+
+.section-subtitle {
+  margin-top: 0;
+  color: #777;
+  font-size: 14px;
+}
+
+/* Account Options */
+
+.account-options {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.account-option {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  background: #fff;
+  border: 1px solid #eeeeee;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.account-option:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  border-color: #d8ead9;
+}
+
+/* Icons */
+
+.option-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 19px;
+  margin-right: 16px;
+}
+
+.orders-icon {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.wishlist-icon {
+  background: #fce4ec;
+  color: #d81b60;
+}
+
+.logout-icon {
+  background: #ffebee;
+  color: #d32f2f;
+}
+
+/* Text */
+
+.option-content {
+  flex: 1;
+}
+
+.option-content h3 {
+  margin: 0 0 5px;
+  font-size: 16px;
+  color: #222;
+}
+
+.option-content p {
+  margin: 0;
+  color: #777;
+  font-size: 13px;
+}
+
+.arrow-icon {
+  color: #999;
+  font-size: 13px;
+}
+
+/* Logout */
+
+.logout-option {
+  margin-top: 5px;
+}
+
+.logout-option:hover {
+  border-color: #ffcdd2;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .profile-page {
+    margin: 30px auto;
+  }
+
+  .profile-header {
+    padding: 25px;
+    gap: 18px;
+  }
+
+  .profile-avatar {
+    width: 70px;
+    height: 70px;
+    font-size: 28px;
+  }
+
+  .profile-info h1 {
+    font-size: 22px;
+  }
+
+  .account-option {
+    padding: 16px;
+  }
 }

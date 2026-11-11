@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { FaStar, FaRocket } from "react-icons/fa";
 import "./Signup.css";
 
 function Signup() {
@@ -22,7 +23,6 @@ function Signup() {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // Check empty fields
     if (
       !formData.name ||
       !formData.email ||
@@ -33,16 +33,13 @@ function Signup() {
       return;
     }
 
-    // Check password
     if (formData.password !== formData.confirmPassword) {
       alert("Passwords do not match");
       return;
     }
 
-    // Signup successful
-    alert("Account created successfully! <FaStar />");
+    alert("Account created successfully!");
 
-    // Go to login page
     navigate("/login");
   };
 
@@ -50,7 +47,11 @@ function Signup() {
     <div className="signup-page">
       <div className="signup-card">
 
-        <h1>Create Account ✨</h1>
+        <h1>
+          {/* Create Account */}
+           <FaStar />
+        </h1>
+
         <p>Sign up to get started</p>
 
         <form onSubmit={handleSubmit}>
@@ -88,7 +89,7 @@ function Signup() {
           />
 
           <button type="submit">
-            Sign Up 🚀
+            Sign Up <FaRocket />
           </button>
 
         </form>

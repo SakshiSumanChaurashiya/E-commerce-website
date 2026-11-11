@@ -1,77 +1,3 @@
-// import { useState } from "react";
-// import { useNavigate } from "react-router-dom";
-// import "./Login.css";
-
-
-// function Login() {
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-
-//   const navigate = useNavigate();
-
-//   const handleLogin = (e) => {
-//     e.preventDefault();
-
-//     if (email.trim() !== "" && password.trim() !== "") {
-//       sessionStorage.setItem("isLoggedIn", "true");
-//       navigate("/", { replace: true });
-//     } else {
-//       alert("Please enter email and password");
-//     }
-//   };
-
-//   return (
-//     <div className="login-container">
-//       <div className="login-box">
-//         <h1>Login Page</h1>
-
-//         <form onSubmit={handleLogin}>
-//           {/* Email */}
-//           <div className="input-group">
-//             <label htmlFor="email">Email:</label>
-
-//             <input
-//               id="email"
-//               type="email"
-//               placeholder="Enter your email"
-//               value={email}
-//               onChange={(e) => setEmail(e.target.value)}
-//             />
-//           </div>
-
-//           {/* Password */}
-//           <div className="input-group">
-//             <label htmlFor="password">Password:</label>
-
-//             <input
-//               id="password"
-//               type="password"
-//               placeholder="Enter your password"
-//               value={password}
-//               onChange={(e) => setPassword(e.target.value)}
-//             />
-//           </div>
-//           {/* Login Button */}
-//           <button type="submit" className="login-btn">
-//             Login
-//           </button>
-
-//           <button type="button" className="email-btn">
-//             <FaEnvelope />
-//            Continue with Email
-//           </button>
-
-//         </form>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Login;
-
-
-
-
 import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import "./Login.css";
@@ -111,23 +37,27 @@ function Login() {
   };
 
   // Google Login
-  const handleGoogleLogin = async () => {
-    try {
-      const result = await signInWithPopup(auth, googleProvider);
+  
+const handleGoogleLogin = async () => {
+  try {
+    const result = await signInWithPopup(auth, googleProvider);
 
-      console.log("Google User:", result.user);
+    console.log("Google User:", result.user);
 
-      sessionStorage.setItem("isLoggedIn", "true");
-      sessionStorage.setItem("userEmail", result.user.email);
+    sessionStorage.setItem("isLoggedIn", "true");
+    sessionStorage.setItem("userEmail", result.user.email);
 
-      navigate("/", { replace: true });
-    } catch (error) {
-      console.error("Google Login Error:", error);
-      alert("Google login failed. Please try again.");
-    }
-  };
+    navigate("/", { replace: true });
+  } catch (error) {
+    console.error("Google Login Error:", error);
+    console.log("Error Code:", error.code);
+    console.log("Error Message:", error.message);
 
-  return (
+    alert(error.code + ": " + error.message);
+  }
+};
+
+return (
     <div className="login-container">
       <div className="login-box">
 
